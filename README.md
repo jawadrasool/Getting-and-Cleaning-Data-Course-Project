@@ -26,7 +26,7 @@ The R script, `run_analysis.R`, is used to create a tidy data set. It performs t
 - Download and unzip the data set if it does not already exist
 - Load all the data (training, test, features and activity_labels)
 - Merge the training and test data sets to create one data set
-- Extracts only the mean and standard deviation for each measurement
+- Extract only the mean and standard deviation for each measurement
 - Use descriptive activity names for the activities in the data set
 - Appropriately labels the data set with descriptive variable names
 - Create a second, independent tidy set with the average of each variable for each activity and each subject
