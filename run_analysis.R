@@ -77,6 +77,7 @@ variableNames <- names(mergedData) # get variable names
 variableNames <- gsub("[-()]", "", variableNames)    # remove "-" and "()" from names
 variableNames <- gsub("std", "Std", variableNames)   # change "std" to "Std"
 variableNames <- gsub("mean", "Mean", variableNames) # change "mean" to "Mean"
+variableNames <- gsub("BodyBody", "Body", variableNames) # Remove duplicate "Body" in the name
 
 names(mergedData) <- variableNames # replace old column names with modified names
 
