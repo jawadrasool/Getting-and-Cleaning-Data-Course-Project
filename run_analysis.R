@@ -75,9 +75,17 @@ mergedData$activity <- factor(mergedData$activity, levels = activity_labels[,1],
 variableNames <- names(mergedData) # get variable names
 
 variableNames <- gsub("[-()]", "", variableNames)    # remove "-" and "()" from names
-variableNames <- gsub("std", "Std", variableNames)   # change "std" to "Std"
+variableNames <- gsub("std", "StandardDeviation", variableNames)   # change "std" to "StandardDeviation"
 variableNames <- gsub("mean", "Mean", variableNames) # change "mean" to "Mean"
 variableNames <- gsub("BodyBody", "Body", variableNames) # Remove duplicate "Body" in the name
+
+# change other abbreviations to full words
+variableNames <- gsub("^f", "frequencyDomain", variableNames)
+variableNames <- gsub("^t", "timeDomain", variableNames)
+variableNames <- gsub("Acc", "Accelerometer", variableNames)
+variableNames <- gsub("Gyro", "Gyroscope", variableNames)
+variableNames <- gsub("Mag", "Magnitude", variableNames)
+variableNames <- gsub("Freq", "Frequency", variableNames)
 
 names(mergedData) <- variableNames # replace old column names with modified names
 
